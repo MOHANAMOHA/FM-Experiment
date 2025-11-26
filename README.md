@@ -65,17 +65,46 @@ MODEL GRAPH:
 
 
 Program
-
+```
+Ac=43.2;
+fc=21600;
+Am=21.6;
+fm=2160;
+fs=50000;
+t=0:1/fs:2/fm;
+beta=3.6;
+Em=Am*cos(2*3.14*fm*t);
+subplot(3,1,1);
+plot(t,Em);
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("Message Signal m(t)");
+Ec=Ac*cos(2*3.14*fc*t);
+subplot(3,1,2);
+plot(t,Ec);
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("Carrier Signal c(t)");
+Efm=Ac*cos(2*3.14*fc*t+beta*sin(2*3.14*fm*t));
+subplot(3,1,3);
+plot(t,Efm);
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("FM Modulated Signal");
+```
 
 Output Waveform
+<img width="765" height="572" alt="image" src="https://github.com/user-attachments/assets/6d1e80bc-61c1-490e-8e89-3a64e7380dd1" />
 
 
 
 Tabulation
+![WhatsApp Image 2025-11-26 at 13 06 08](https://github.com/user-attachments/assets/db859eed-e92a-4088-a6b2-040a435c24ba)
 
 
 
 Calculation
+![WhatsApp Image 2025-11-26 at 13 06 54](https://github.com/user-attachments/assets/d197e0b6-5405-4a75-a321-bbec99b86cd0)
 
 
 
